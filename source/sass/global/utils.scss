@@ -19,10 +19,8 @@
 
 .rouble {
   font-family: $ff-rouble;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
+  text-transform: lowercase;
+  font-weight: 400;
 }
 
 .visually-hidden {
@@ -40,6 +38,16 @@
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reset-text {
+  margin: 0;
 }
 
 .scroll-lock-ios {
@@ -62,6 +70,5 @@
 }
 
 .no-transition {
-  /* stylelint-disable-next-line */
-  transition: none !important;
+  transition: none;
 }
