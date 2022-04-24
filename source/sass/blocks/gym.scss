@@ -205,6 +205,10 @@
       content: none;
     }
 
+    .gym__video {
+      display: block;
+    }
+
     .gym__video-play-button {
       display: none;
     }
@@ -212,6 +216,7 @@
 }
 
 .gym__video {
+  display: none;
   width: 364px;
   height: 228px;
   object-fit: cover;
