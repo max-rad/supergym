@@ -57,6 +57,8 @@
 
   @include mobile {
     flex-direction: column;
+    width: 100%;
+    max-width: 566px;
   }
 
   &::after {
@@ -177,7 +179,11 @@
 }
 
 .events__side-block {
-  width: 100%;
+  @include mobile {
+    width: 100%;
+    max-width: 566px;
+  }
+
 }
 
 .events__list {

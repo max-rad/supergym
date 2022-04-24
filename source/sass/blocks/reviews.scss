@@ -97,6 +97,13 @@
 
   border: none;
   background-color: $color-transparent;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
 }
 
 .reviews__icon {
