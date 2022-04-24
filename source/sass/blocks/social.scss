@@ -1,0 +1,36 @@
+.social {
+  align-self: flex-end;
+  margin-bottom: 45px;
+  margin-left: auto;
+}
+
+.social__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.social__item {
+  margin-bottom: 19px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.social__link {
+  display: block;
+
+  font-size: 12px;
+  line-height: 14px;
+  text-align: right;
+  text-transform: uppercase;
+
+  color: $color-default-white;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}

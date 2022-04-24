@@ -1,0 +1,147 @@
+.feedback {
+  display: flex;
+  justify-content: flex-end;
+  padding: 60px 103px 64px;
+
+  @include tablet {
+    justify-content: center;
+    padding: 68px 163px 69px 133px;
+  }
+
+  @include mobile {
+    justify-content: stretch;
+    padding: 68px 15px 68px;
+  }
+
+  background-color: $color-sapphire;
+}
+
+.feedback__wrapper {
+  width: 100%;
+  max-width: 477px;
+
+  @include tablet {
+    max-width: unset;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  h2 {
+    align-self: flex-start;
+    margin-bottom: 33px;
+
+    font-family: $ff-bebas-neue;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 64px;
+    letter-spacing: 0.03em;
+    text-transform: lowercase;
+
+    @include tablet {
+      margin-bottom: 36px;
+
+      font-size: 42px;
+      line-height: 42px;
+    }
+
+    @include mobile {
+      margin-bottom: 37px;
+
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    color: $color-default-white;
+  }
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 410px;
+
+  @include tablet {
+    max-width: unset;
+  }
+}
+
+.feedback__list {
+  display: flex;
+  column-gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 28px;
+
+  @include tablet {
+    column-gap: 60px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: 33px;
+    margin-bottom: 40px;
+  }
+}
+
+.feedback__item {
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: 5px 5px 5px 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+    }
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+
+      color: $color-default-white;
+    }
+
+    @include tablet {
+      min-width: 206px;
+    }
+
+    @include mobile {
+      width: 100%;
+      min-width: unset;
+    }
+
+    border: none;
+    border-bottom: 1px solid $color-light-slate-grey;
+    background-color: $color-transparent;
+    color: $color-light-slate-grey;
+  }
+}
+
+.feedback__button {
+  padding: 16px 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include tablet {
+    min-width: 472px;
+  }
+
+  @include mobile {
+    width: 100%;
+    min-width: unset;
+  }
+}

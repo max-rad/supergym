@@ -90,6 +90,7 @@ const copy = () => {
     'source/**.html',
     'source/fonts/**',
     'source/img/**',
+    'source/media/**',
     'source/favicon/**',
   ], {
     base: 'source',

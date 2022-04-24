@@ -7,7 +7,7 @@
 // Desktop first
 
 @mixin desktop {
-  @media (max-width: $vp-1366) {
+  @media (max-width: $vp-1366 - 1) {
     @content;
   }
 }

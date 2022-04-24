@@ -1,0 +1,296 @@
+.coaches {
+  background-color: $color-default-white;
+}
+
+.coaches__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 47px 120px;
+
+  @include tablet {
+    padding: 0 45px 100px;
+  }
+
+  @include mobile {
+    padding: 0 15px 70px;
+  }
+}
+
+.coaches__main-title-wrapper {
+  align-self: flex-start;
+  margin-bottom: 52px;
+  padding: 0 56px;
+
+  @include tablet {
+    align-self: center;
+    margin-bottom: 42px;
+    padding: 0;
+  }
+
+  @include mobile {
+    margin-bottom: 44px;
+  }
+
+  h2 {
+    font-family: $ff-bebas-neue;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 42px;
+      line-height: 42px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+}
+
+.coaches__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
+  width: 100%;
+
+  &--no-js {
+    padding: 0 56px;
+
+    .coaches__control {
+      display: none;
+    }
+
+    .coaches__list {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 40px;
+    }
+
+    .coaches__item {
+      display: block;
+    }
+  }
+
+  @include tablet {
+    width: auto;
+  }
+
+  @include mobile {
+    column-gap: 22px;
+  }
+}
+
+.coaches__control {
+  width: 16px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+
+  @include mobile {
+    width: 10px;
+    height: 19px;
+  }
+
+  border: none;
+  background-color: $color-transparent;
+
+  cursor: pointer;
+}
+
+.coaches__icon {
+  @include mobile {
+    width: 10px;
+    height: 19px;
+  }
+}
+
+.coaches__list {
+  display: flex;
+  column-gap: 40px;
+  max-width: 1160px;
+  min-width: 944px;
+
+  @include tablet {
+    column-gap: 30px;
+    width: 566px;
+    max-width: unset;
+    min-width: unset;
+  }
+
+  @include mobile {
+    width: 226px;
+  }
+}
+
+.coaches__item {
+  position: relative;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      .coaches__title-wrapper {
+        bottom: 0;
+        height: 100%;
+        padding: 51px 10px 50px;
+
+        @include tablet {
+          padding: 51px 50px 50px;
+        }
+
+        @include mobile {
+          padding: 41px 30px 40px;
+        }
+
+        background-color: rgba($color-sapphire, 0.89);
+      }
+
+      .coaches__info-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  @include tablet {
+    &:focus {
+      .coaches__title-wrapper {
+        bottom: 0;
+        height: 100%;
+        padding: 51px 10px 50px;
+
+        @include tablet {
+          padding: 51px 50px 50px;
+        }
+
+        @include mobile {
+          padding: 41px 30px 40px;
+        }
+
+        background-color: rgba($color-sapphire, 0.89);
+      }
+
+      .coaches__info-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.coaches__title-wrapper {
+  position: absolute;
+  width: 100%;
+  bottom: 23px;
+  left: 0;
+
+  overflow-y: auto;
+
+  h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+
+    color: $color-default-white;
+  }
+}
+
+.coaches__info-wrapper {
+  display: none;
+
+  p {
+    margin-bottom: 34px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    color: $color-cindle;
+  }
+}
+
+.coaches__info-list {
+  max-width: 168px;
+
+  @include tablet {
+    max-width: unset;
+  }
+}
+
+.coaches__info-item {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+
+  font-size: 14px;
+  line-height: 21px;
+
+  @include tablet {
+    margin-bottom: 13px;
+    padding-left: 21px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  color: $color-default-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 9px;
+    width: 6px;
+    height: 6px;
+
+    @include tablet {
+      top: 7px;
+      left: 5px;
+    }
+
+    border-radius: 50%;
+    background-color: $color-default-white;
+  }
+}
+
+.coaches__image-wrapper {
+  width: 100%;
+  height: 294px;
+
+  @include tablet {
+    width: 268px;
+  }
+
+  @include mobile {
+    width: 226px;
+    height: 274px;
+  }
+
+  img {
+    width: 260px;
+    height: 294px;
+    object-fit: cover;
+
+    @include tablet {
+      width: 268px;
+    }
+
+    @include mobile {
+      width: 226px;
+      height: 274px;
+    }
+  }
+}

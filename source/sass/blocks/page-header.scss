@@ -1,0 +1,252 @@
+.page-header {
+  background: $venetian-red-and-dark-cerulean;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 27px 103px 48px;
+
+  @include tablet {
+    padding: 37px 45px 82px;
+  }
+
+  @include mobile {
+    padding: 17px 15px 80px;
+  }
+}
+
+.page-header__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1px;
+
+  @include tablet {
+    margin-bottom: 21px;
+  }
+}
+
+.page-header__logo-wrapper {
+  width: 89px;
+  height: 20px;
+  margin-top: 4px;
+  margin-right: 30px;
+
+  @include mobile {
+    width: 68px;
+    height: 15px;
+  }
+}
+
+.page-header__logo {
+  display: block;
+  width: 89px;
+  height: 20px;
+
+  @include tablet {
+    width: 82px;
+    height: 17px;
+  }
+
+  @include mobile {
+    width: 68px;
+    height: 15px;
+  }
+}
+
+.page-header__phone {
+  display: block;
+
+  font-family: $ff-bebas-neue;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  @include mobile {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  color: $color-default-white;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}
+
+.page-header__main {
+  display: flex;
+  column-gap: 64px;
+  justify-content: center;
+
+  @include tablet {
+    column-gap: 30px;
+  }
+
+  &::after {
+    order: 1;
+    content: "";
+    display: block;
+    width: 500px;
+    height: 556px;
+
+    background-image: url("../img/decor/header/header-promo-desktop.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+
+    @include tablet {
+      width: 324px;
+      height: 390px;
+      background-image: url("../img/decor/header/header-promo-tablet.jpg");
+    }
+
+    @include mobile {
+      content: none;
+    }
+
+    @include retina {
+      background-image: url("../img/decor/header/header-promo-desktop@2x.jpg");
+
+      @include tablet {
+        background-image: url("../img/decor/header/header-promo-tablet@2x.jpg");
+      }
+    }
+  }
+}
+
+.page-header__promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 396px;
+  margin-top: 107px;
+
+  @include tablet {
+    max-width: 324px;
+    margin-top: 49px;
+  }
+
+  @include mobile {
+    max-width: 290px;
+  }
+
+  span {
+    margin-bottom: 9px;
+
+    font-family: $ff-bebas-neue;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 59px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @include tablet {
+      margin-bottom: 3px;
+
+      font-size: 34px;
+      line-height: 41px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+
+      font-size: 28px;
+      line-height: 34px;
+    }
+
+    color: $color-default-white;
+  }
+
+  h1 {
+    margin-bottom: 58px;
+
+    font-family: $ff-bebas-neue;
+    font-weight: 700;
+    font-size: 109px;
+    line-height: 109px;
+    letter-spacing: 0.03em;
+    text-align: right;
+    text-transform: uppercase;
+
+    @include tablet {
+      margin-bottom: 43px;
+
+      font-size: 86px;
+      line-height: 86px;
+    }
+
+    @include mobile {
+      margin-bottom: 45px;
+
+      font-size: 78px;
+      line-height: 78px;
+    }
+
+    color: $color-default-white;
+  }
+
+  a {
+    width: 230px;
+    padding: 18px 20px 17px;
+
+    @include tablet {
+      width: 183px;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: 19px 20px 18px;
+    }
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.page-header__list {
+  position: absolute;
+  top: 196px;
+  left: 20px;
+
+  @include tablet {
+    top: 137px;
+    left: 1px;
+  }
+
+  @include mobile {
+    top: 126px;
+    left: 0;
+  }
+}
+
+.page-header__item {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: right;
+
+  color: $color-default-white;
+}
+
+.page-header__social {
+  order: 2;
+
+  @include tablet {
+    display: none;
+  }
+}
