@@ -181,7 +181,7 @@
 
   &--active {
     display: grid;
-    grid-template-columns: minmax(330px, 360px) minmax(330px, 360px) minmax(330px, 360px);
+    grid-template-columns: minmax(300px, 360px) minmax(300px, 360px) minmax(300px, 360px);
     column-gap: 40px;
 
     @include tablet {
@@ -203,19 +203,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 448px;
-  padding: 62px 62px 68px;
-
-  @include tablet {
-    width: 442px;
-  }
-
-  @include mobile {
-    width: 290px;
-    min-height: 384px;
-    padding: 50px 42px 55px;
-  }
-
-  background-color: $color-default-white;
+  padding: 62px 32px 68px;
 
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover::before {
@@ -232,7 +220,7 @@
     }
 
     &:hover {
-      .membership__button {
+      a {
         padding: 25px 20px;
 
         border: none;
@@ -243,6 +231,8 @@
   }
 
   @include tablet {
+    width: 442px;
+
     &:focus::before {
       content: "";
       position: absolute;
@@ -257,7 +247,7 @@
     }
 
     &:focus {
-      .membership__button {
+      a {
         padding: 25px 20px;
 
         border: none;
@@ -266,92 +256,94 @@
       }
     }
   }
-}
-
-.membership__title {
-  z-index: 1;
-  margin-bottom: 10px;
-
-  font-size: 26px;
-  line-height: 29px;
 
   @include mobile {
-    font-size: 22px;
-    line-height: 24px;
-  }
-}
-
-.membership__info {
-  z-index: 1;
-  margin-bottom: 59px;
-
-  @include mobile {
-    margin-bottom: 48px;
+    width: 290px;
+    min-height: 384px;
+    padding: 50px 42px 55px;
   }
 
-  color: $color-chambray;
-}
+  background-color: $color-default-white;
 
-.membership__price {
-  z-index: 1;
-  position: relative;
-  margin-bottom: 35px;
+  h3 {
+    z-index: 1;
+    margin-bottom: 10px;
 
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 90px;
-
-  @include mobile {
-    margin-bottom: 31px;
-
-    font-size: 48px;
-    line-height: 72px;
-  }
-
-  color: $color-egyptian-blue;
-
-  &::before {
-    z-index: -1;
-    content: attr(data-price);
-    position: absolute;
-    top: -47px;
-    left: -18px;
-    width: 100%;
-    height: 69px;
-
-    font-weight: 700;
-    font-size: 100px;
-    line-height: 150px;
+    font-size: 26px;
+    line-height: 29px;
 
     @include mobile {
-      top: -38px;
-      left: -14px;
-      height: 55px;
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
 
-      font-size: 80px;
-      line-height: 120px;
+  p {
+    z-index: 1;
+    margin-bottom: 59px;
+
+    @include mobile {
+      margin-bottom: 48px;
     }
 
-    color: $color-whisper;
-    opacity: 0.48;
+    color: $color-chambray;
+
+    + p {
+      z-index: 1;
+      position: relative;
+      margin-bottom: 35px;
+
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 90px;
+
+      @include mobile {
+        margin-bottom: 31px;
+
+        font-size: 48px;
+        line-height: 72px;
+      }
+
+      color: $color-egyptian-blue;
+
+      &::before {
+        z-index: -1;
+        content: attr(data-price);
+        position: absolute;
+        top: -47px;
+        left: -18px;
+        width: 100%;
+        height: 69px;
+
+        font-weight: 700;
+        font-size: 100px;
+        line-height: 150px;
+
+        @include mobile {
+          top: -38px;
+          left: -14px;
+          height: 55px;
+
+          font-size: 80px;
+          line-height: 120px;
+        }
+
+        color: $color-whisper;
+        opacity: 0.48;
+      }
+    }
   }
-}
 
-.membership__rouble {
-  font-family: $ff-rouble;
+  a {
+    z-index: 1;
+    width: 206px;
+    padding: 23px 20px;
 
-  color: $color-sapphire;
-}
-
-.membership__button {
-  z-index: 1;
-  width: 206px;
-  padding: 23px 20px;
-
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.05em;
-  text-align: center;
-  text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
