@@ -21,9 +21,9 @@ const slider = () => {
 
   sliderWrapper.classList.remove('coaches__content-wrapper--no-js');
 
-  if (window.innerWidth < 767) {
+  if (window.innerWidth <= 767) {
     initSlider(MOBILE_NUMBER_OF_ELEMENTS);
-  } else if (window.innerWidth < 1199) {
+  } else if (window.innerWidth <= 1199) {
     initSlider(TABLET_NUMBER_OF_ELEMENTS);
   } else {
     initSlider(DESKTOP_NUMBER_OF_ELEMENTS);
