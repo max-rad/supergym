@@ -192,6 +192,8 @@
     }
 
     @include mobile {
+      width: 100%;
+      max-width: 442px;
       row-gap: 35px;
     }
   }
@@ -206,7 +208,8 @@
   padding: 62px 32px 68px;
 
   @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       content: "";
       position: absolute;
       top: 0;
@@ -219,7 +222,8 @@
       border-image-source: linear-gradient(to right bottom, $color-crimson 0%, $color-smalt 100%);
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       a {
         padding: 25px 20px;
 
@@ -258,7 +262,7 @@
   }
 
   @include mobile {
-    width: 290px;
+    width: 100%;
     min-height: 384px;
     padding: 50px 42px 55px;
   }

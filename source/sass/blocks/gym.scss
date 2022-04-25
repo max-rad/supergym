@@ -184,6 +184,7 @@
   }
 
   @include tablet {
+    top: unset;
     bottom: 100px;
     left: 50%;
     width: 266px;
