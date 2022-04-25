@@ -355,6 +355,9 @@
     background-color: $color-transparent;
     color: $color-sapphire;
 
+    cursor: pointer;
+    user-select: none;
+
     transition: opacity $trans-default;
 
     &:disabled {
