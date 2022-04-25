@@ -335,6 +335,7 @@
   }
 
   a {
+    display: block;
     z-index: 1;
     width: 206px;
     padding: 23px 20px;
@@ -345,5 +346,24 @@
     letter-spacing: 0.05em;
     text-align: center;
     text-transform: uppercase;
+
+    border: 2px solid $color-sapphire;
+    background-color: $color-transparent;
+    color: $color-sapphire;
+
+    transition: opacity $trans-default;
+
+    &:disabled {
+      opacity: 0.5;
+
+      pointer-events: none;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+    }
   }
 }

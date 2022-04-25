@@ -1,10 +1,10 @@
 .btn {
   display: block;
 
+  border: none;
+  background-color: $color-transparent;
   color: $color-default-white;
 
-  background-color: $color-transparent;
-  border: none;
   cursor: pointer;
   user-select: none;
 
@@ -16,21 +16,7 @@
     border: 3px solid $color-default-white;
   }
 
-  &--sapphire-border {
-    border: 2px solid $color-sapphire;
-    color: $color-sapphire;
-  }
-
-  &--white-underline {
-    border-bottom: 1px solid $color-default-white;
-  }
-
-  &--sapphire-underline {
-    border-bottom: 1px solid $color-sapphire;
-  }
-
   transition: opacity $trans-default;
-
 
   &:disabled {
     opacity: 0.5;
