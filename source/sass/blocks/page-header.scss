@@ -54,6 +54,22 @@
   }
 }
 
+.page-header__contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  row-gap: 10px;
+  column-gap: 30px;
+
+  @include tablet {
+    column-gap: 20px;
+  }
+}
+
+.page-header__contacts-item {
+  position: relative;
+}
+
 .page-header__phone {
   display: block;
 
