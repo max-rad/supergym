@@ -73,10 +73,26 @@
   }
 
   &--top {
+    @include tablet {
+      margin-bottom: 45px;
+    }
+
+    .advantages__item {
+      &:first-child {
+        margin-left: 27px;
+
+        @include tablet {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &--bottom {
     &::before {
       content: "";
       position: absolute;
-      bottom: -78px;
+      top: -54px;
       left: 0;
       width: 340px;
       height: 2px;
@@ -87,7 +103,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -78px;
+      top: -54px;
       right: 0;
       width: 340px;
       height: 2px;
@@ -96,21 +112,9 @@
     }
 
     @include tablet {
-      margin-bottom: 45px;
-
       &::before,
       &::after {
         content: none;
-      }
-    }
-
-    .advantages__item {
-      &:first-child {
-        margin-left: 27px;
-
-        @include tablet {
-          margin-left: 0;
-        }
       }
     }
   }
