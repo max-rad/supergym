@@ -17,6 +17,13 @@
   }
 }
 
+.swiper-button-disabled {
+  opacity: 0.5;
+
+  pointer-events: none;
+  cursor: default;
+}
+
 .columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -27,14 +34,6 @@
     display: flex;
     flex-direction: column;
   }
-}
-
-.rouble {
-  font-family: $ff-rouble;
-  text-transform: lowercase;
-  font-weight: 400;
-
-  color: $color-sapphire;
 }
 
 .visually-hidden {

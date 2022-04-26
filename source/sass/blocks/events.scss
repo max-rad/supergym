@@ -213,7 +213,6 @@
 .events__list {
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
 
   @include tablet {
     flex-direction: row;
@@ -222,23 +221,26 @@
 
   @include mobile {
     flex-direction: column;
-    row-gap: 30px;
   }
 }
 
 .events__item {
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-height: 211px;
+  margin-bottom: 40px;
   padding: 22px 28px 28px;
 
   @include tablet {
     width: 324px;
+    margin-bottom: 0;
   }
 
   @include mobile {
     align-items: center;
     width: 100%;
+    margin-bottom: 30px;
     padding: 33px 28px 39px;
   }
 
@@ -246,6 +248,10 @@
   border-style: solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to right bottom, $color-crimson 0%, $color-smalt 100%);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &--bring-a-friend {
     @include tablet {

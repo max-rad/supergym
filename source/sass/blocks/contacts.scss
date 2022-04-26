@@ -138,6 +138,8 @@
 .contacts__phone {
   display: block;
 
+  color: $color-sapphire;
+
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
@@ -148,6 +150,8 @@
 
 .contacts__email {
   display: block;
+
+  color: $color-sapphire;
 
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,

@@ -12,6 +12,17 @@
 
 .footer-social__list {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  max-width: 110px;
+
+  @include tablet {
+    max-width: 100px;
+  }
+
+  @include mobile {
+    max-width: unset;
+  }
 }
 
 .footer-social__item {
