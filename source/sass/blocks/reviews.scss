@@ -188,6 +188,12 @@
   }
 
   p {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     font-weight: 400;
     line-height: 22px;
 
